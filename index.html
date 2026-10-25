@@ -954,6 +954,126 @@
     .float-photo-left, .float-photo-right { display: none; }
   }
 
+  /* ── Mobile: typography, tap targets, form usability ── */
+  @media (max-width: 480px) {
+    /* Comfortable section padding */
+    section {
+      padding: 60px 20px;
+    }
+
+    /* Readable section labels (was 10px) */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+    }
+
+    /* Countdown */
+    .countdown-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+    }
+    .countdown-section {
+      padding: 28px 20px;
+    }
+    .cd-num {
+      font-size: clamp(28px, 8vw, 38px);
+    }
+    .cd-label {
+      font-size: 9px;
+    }
+
+    /* Story cards */
+    .story-card p {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* Detail cards — single column, comfortable tap area */
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+    .detail-card {
+      padding: 24px 20px;
+    }
+
+    /* RSVP section */
+    .rsvp-question {
+      margin-bottom: 28px;
+    }
+    .rsvp-question-label {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      margin-bottom: 12px;
+    }
+
+    /* Stack attendance choices vertically, full width, 52px min tap target */
+    .rsvp-choices {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rsvp-choice {
+      width: 100%;
+    }
+    .rsvp-choice label {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 15px;
+      padding: 16px 18px;
+      min-height: 52px;
+      border-radius: 6px;
+    }
+
+    /* Inputs: 16px prevents iOS auto-zoom; padding for easy tapping */
+    .rsvp-input,
+    .rsvp-textarea {
+      font-size: 16px;
+      padding: 16px 14px;
+      border-radius: 6px;
+    }
+    .rsvp-textarea {
+      min-height: 110px;
+    }
+
+    /* Submit button: full width, tall enough to tap easily */
+    .rsvp-submit {
+      font-size: 13px;
+      padding: 18px 24px;
+      min-height: 52px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+
+    /* RSVP intro paragraph */
+    .rsvp-wrap > p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* Scatter photos: shrink on small screens */
+    .scatter-wrap {
+      height: clamp(200px, 60vw, 300px);
+    }
+    .scatter-a {
+      width: clamp(100px, 26vw, 160px);
+      height: clamp(125px, 33vw, 200px);
+    }
+    .scatter-b {
+      width: clamp(130px, 38vw, 220px);
+      height: clamp(163px, 48vw, 276px);
+    }
+    .scatter-c {
+      width: clamp(90px, 22vw, 140px);
+      height: clamp(113px, 28vw, 176px);
+    }
+
+    /* Formal banner */
+    .formal-sub {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+    }
+  }
+
   /* Scattered polaroids above RSVP */
   .scatter-wrap {
     position: relative;
